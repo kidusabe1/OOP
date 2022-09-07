@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 class students{
     char name[20];
     int roll_number;
@@ -28,10 +27,6 @@ class students{
             average_mark= n/count;
             return average_mark;
         }
-        void show_count_and_total()
-        {
-                cout<<count<<"  "<<total_marks<<endl;
-        }
 };
 int students::n;
 int students::average_mark;
@@ -40,12 +35,15 @@ int students:: count;
 
 int main()
 {
-    class students s[2];
-    for(int i=0;i<2;i++)
+    int n;
+    cout<<"Give number of students\n";
+    cin>>n;
+    students s[n];
+    for(int i=0;i<n;i++)
     {
         s[i].get_data();
     }
     //calculating the total sum of 3 students//
-    cout<<"The average marks of 2 students is:"<< students::average_mark_fun();
+    cout<<"The average marks of "<<n <<" students is:"<< students::average_mark_fun();
     return 0;
 }

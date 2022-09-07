@@ -19,13 +19,17 @@ class Box {
       double Volume() {
          return length * breadth * height;
       }
-      
+
+   static void static_ahmed();   
+
    private:
       double length;     // Length of a box
       double breadth;    // Breadth of a box
       double height;     // Height of a box
+      static int anything;
 };
 
+int Box:: anything;
 // Initialize static member of class Box
 int Box::objectCount;
 

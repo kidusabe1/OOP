@@ -20,7 +20,7 @@ class pal{
                 temp= temp*10+rem;
                 f/=10;
             }
-            if(temp==space)
+            if(temp==space) 
                 return 1;
 
             else
