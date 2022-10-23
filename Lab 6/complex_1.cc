@@ -12,7 +12,6 @@ class complex{
         {
             cout<<"Complex Number is not yet given.\n";
         }
-
         complex(float a, float b)
         {
             real=a;
@@ -33,11 +32,8 @@ class complex{
 
 int main()
 {
-    cout<<"1"<<endl;
     complex obj1;
-    cout<<"2"<<endl;
     complex obj2(23,2.3);
-    cout<<"3"<<endl;
     complex obj3(obj2);
     return 0;
 }

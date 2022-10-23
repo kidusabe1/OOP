@@ -1,6 +1,5 @@
 #include  <iostream>
 #include<string.h>
-#include  <bits/stdc++.h>
 using namespace std;
 
 class str_operation{
@@ -18,12 +17,13 @@ class str_operation{
     str_operation(string WORD)
     {
         my_word=WORD;
-        cout<<"Your given string is "<<my_word<<endl;
+        string_len=WORD.length();
+        cout<<"Your given string is "<<my_word<<"and has a length of "<<string_len<<endl;
     }
 
     str_operation(str_operation &s1)
     {
-        cout<<"Your given string is "<<s1.my_word<<endl;
+        cout<<"Your given string is "<<s1.my_word<<"and has a length of "<<s1.string_len<<endl;
     }
 
     void str_concatinate()

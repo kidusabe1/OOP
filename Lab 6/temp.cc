@@ -1,22 +1,31 @@
 #include <iostream>
-class A {
-    int i;
-    public:
-        A(int j = 0) 
-        {
-            std::cout << "A::A" << j << "() constructor "
-                      << std::endl;
-        }
-        ~A()
-        {
-            std::cout << "A::~A" << i << "() destructor "
-                      << std::endl;
-        }
+using namespace std;
+class A
+{
+public:
+A()
+{
+cout<<"Construct A"<<endl;
+}
+~A()
+{
+cout<<" Destruct A"<<endl;
+}
 };
- 
-A a1(1);
- 
+class B : public A
+{
+public:
+B()
+{
+cout<<"Construct B"<<endl;
+}
+~B()
+{
+cout<<" Destruct B"<<endl;
+}
+};
 int main()
 {
-    A a2(2);
+B b;
+return 0;
 }
