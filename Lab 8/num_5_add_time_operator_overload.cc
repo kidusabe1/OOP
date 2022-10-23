@@ -23,9 +23,13 @@ class Time{
         Time operator +(Time dist)
         {
             Time SUM;
-            if(minute+dist.minute>59)
             SUM.hour= hour+dist.hour;
             SUM.minute=minute+dist.minute;
+            if(minute+dist.minute>59)
+            {
+                SUM.minute=0;
+                SUM.hour+=1;
+            }
             return SUM;
         }
 
@@ -40,44 +44,18 @@ class Time{
                 return false;
             }
         }   
-        Time operator >(Time comp)
-        {
-            Time obj;
-            obj.hour=hour;
-            obj.minute=minute;
-            if(hour>comp.hour)
-            {
-                return  obj;
-            }
-            else if(hour<comp.hour)
-            {
-                return comp;
-            }
-            else{
-                if(minute=comp.minute)
-                {
-                    printf("They are Equal\n");
-                    return comp;
-                }
-                else if(minute>comp.minute)
-                    return obj;
-                else
-                    return comp;
-            }
-        }
 };
 
 int main()
 {
-    Time t1(10,56);
-    Time t2(10,56);
+    Time t1(10,20);
+    Time t2(10,20);
     Time t3= t1+t2;
     t3.display();
     if(t1==t2)
         cout<<"Equivalent\n";
     else
         cout<<"Non Equivalent\n";
-    Time t4= t1>t2;
-    t4.display();
+
     return 0;
 }
